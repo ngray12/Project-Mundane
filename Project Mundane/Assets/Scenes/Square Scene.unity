@@ -433,7 +433,8 @@ MonoBehaviour:
   minTimeBetweenObstacles: 1.2
   maxTimeBetweenObstacles: 2.5
   minGap: 1.5
-  maxGap: 3
+  maxGap: 5
+  singleSpawnChance: 0.95
 --- !u!1001 &1553351676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6831510407555646961, guid: 352955cbced273b41983a479978a4b5d, type: 3}
       propertyPath: gravityStrength
-      value: 100
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7852618747171321054, guid: 352955cbced273b41983a479978a4b5d, type: 3}
       propertyPath: m_Name
