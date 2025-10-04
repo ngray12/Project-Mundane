@@ -5,7 +5,9 @@ using UnityEngine;
 public class Triangle : MonoBehaviour
 {
     Rigidbody2D rb;
+    [SerializeField] float speed;
     [SerializeField] float jumpHeight;
+    [SerializeField] float jumpBoost;
     [SerializeField] Transform triangle;
     public bool isGrounded() 
     {
@@ -23,6 +25,9 @@ public class Triangle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float newXPos = transform.position.x + speed * Time.deltaTime;
+
+        transform.position = new Vector3(newXPos, transform.position.y, transform.position.z);
         Jump();
     }
     void Jump()
@@ -37,11 +42,12 @@ public class Triangle : MonoBehaviour
             {
                 rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.right * jumpBoost, ForceMode2D.Impulse);
             }
         }
         else
         {
-            triangle.Rotate(Vector3.back * 1.5f);
+            triangle.Rotate(Vector3.back * 904.8304372f * Time.deltaTime);
         }
     }
 }
