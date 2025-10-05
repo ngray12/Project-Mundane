@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BossLoader : MonoBehaviour
 {
-    public float timeTillBoss = 50f;
+    public float timeTillBoss = 30f;
     public string bossSceneName = "Square Boss Scene";
 
     private float timer;
