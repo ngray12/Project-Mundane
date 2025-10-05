@@ -24,5 +24,9 @@ public class Circle : MonoBehaviour
         {
             rb.AddForce(Vector2.up * thrust* Time.deltaTime, ForceMode2D.Impulse);
         }
+        else 
+        {
+            rb.AddForce(Vector2.up * -thrust * Time.deltaTime, ForceMode2D.Impulse);
+        }
     }
 }
