@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriangleBoss : MonoBehaviour
 {
@@ -128,5 +129,6 @@ public class TriangleBoss : MonoBehaviour
         dead = true;
         spriteRenderer.color = new Color32(58,56,56,255);
         Debug.Log("Death");
+        SceneManager.LoadScene("main");
     }
 }

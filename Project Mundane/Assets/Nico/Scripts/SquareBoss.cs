@@ -170,7 +170,7 @@ public class SquareBoss : MonoBehaviour
         rb.velocity = Vector2.zero;
         Debug.Log("Boss Defeated");
         Destroy(gameObject);
-        Invoke(nameof(EndFight), 2f);
+        SceneManager.LoadScene("main");
     }
 
     void PlayHitSound()
@@ -181,7 +181,7 @@ public class SquareBoss : MonoBehaviour
         }
     }
 
-    void EndFight() => SceneManager.LoadScene("VictoryScene");
+    
 
     // ------------------ Gizmos ------------------
     void OnDrawGizmosSelected()

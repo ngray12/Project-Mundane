@@ -140,6 +140,7 @@ public class CircleBoss : MonoBehaviour
         dead = true;
         spriteRenderer.color = Color.gray;
         Debug.Log("Death");
+        SceneManager.LoadScene("main");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

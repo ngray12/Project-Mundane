@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StarBoss : MonoBehaviour
 {
@@ -84,6 +85,7 @@ public class StarBoss : MonoBehaviour
     {
         Debug.Log("Star Boss Defeated!");
         Destroy(gameObject);
+        SceneManager.LoadScene("main");
     }
     void PlayShootSound()
     {

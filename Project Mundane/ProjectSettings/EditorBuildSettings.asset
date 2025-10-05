@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UITest.unity
+    path: Assets/Scenes/main.unity
     guid: 8a0f4563527073948af4ae594305a9f0
   - enabled: 1
     path: Assets/Scenes/Square Scene.unity
