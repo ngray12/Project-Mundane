@@ -139,7 +139,6 @@ public class SquareBoss : MonoBehaviour
         else if (collision.gameObject.CompareTag("Wall"))
         {
             Debug.Log("Hit Wall");
-            PlayHitSound();
             StopMoving();
         }
     }

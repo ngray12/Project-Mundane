@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Circle : MonoBehaviour
 {
@@ -27,6 +28,18 @@ public class Circle : MonoBehaviour
         else 
         {
             rb.AddForce(Vector2.up * -thrust * Time.deltaTime, ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null)
+        {
+            if (collision.CompareTag("Obstacle"))
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }
