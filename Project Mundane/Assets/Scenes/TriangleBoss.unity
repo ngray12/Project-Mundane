@@ -331,7 +331,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bounce Spawn Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -367,7 +367,7 @@ GameObject:
   m_Layer: 0
   m_Name: Lethal Spawn Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -380,7 +380,7 @@ Transform:
   m_GameObject: {fileID: 659772289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: -0.46, z: 0}
+  m_LocalPosition: {x: -1.01, y: -0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,9 +851,9 @@ GameObject:
   - component: {fileID: 1752837550}
   - component: {fileID: 1752837551}
   - component: {fileID: 1752837552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,8 +868,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9659258, w: 0.2588191}
   m_LocalPosition: {x: 7.992531, y: 0.40560007, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1466837333}
   m_Father: {fileID: 652208617}
@@ -898,6 +898,10 @@ MonoBehaviour:
   bounceShotSpawnPoint: {fileID: 495264578}
   lethalRound: {fileID: 90423849191664050, guid: fd0caa423d3fe9947ada4eda7c93fa17, type: 3}
   bounceRound: {fileID: 2969594355875015208, guid: 421b4b034c220aa49b3b8692932383f5, type: 3}
+  sizeDecrease: 0.1
+  dead: 0
+  spriteRenderer: {fileID: 1466837334}
+  Force: 3
 --- !u!58 &1752837552
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -932,7 +936,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 0.84
 --- !u!1 &1811671335
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +949,7 @@ GameObject:
   - component: {fileID: 1811671337}
   m_Layer: 7
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

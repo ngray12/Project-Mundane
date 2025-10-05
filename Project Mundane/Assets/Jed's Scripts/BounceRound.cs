@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BounceRound : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] float returnSpeed;
     Vector2 Direction;
     public float radius;
     public float distance;
     public LayerMask whatIsSolid;
+    public GameObject Boss;
+    TriangleBoss bossCode;
+    public bool returning;
     // Start is called before the first frame update
     void Start()
     {
-
+        Boss = GameObject.Find("Boss");
+        bossCode = FindFirstObjectByType<TriangleBoss>();
     }
 
     // Update is called once per frame
@@ -28,11 +34,27 @@ public class BounceRound : MonoBehaviour
             if (hitCollider.tag == "Bounce")
             {
                 Debug.Log("Bounce Back");
+                returning = true;
             }
-            DestroyBullet();
+            else if (hitCollider.tag == "Boss")
+            {
+                Debug.Log("Shrink");
+                bossCode.Shrink();
+                DestroyBullet();
+            }
+            else if(hitCollider.tag == "Ground") 
+            { 
+                DestroyBullet();
+            }
         }
-
-        transform.Translate(Direction * speed * Time.deltaTime);
+        if (!returning)
+        {
+            transform.Translate(Direction * speed * Time.deltaTime);
+        }
+        else 
+        { 
+            transform.position = Vector2.MoveTowards(transform.position, Boss.transform.position, returnSpeed * Time.deltaTime);
+        }
     }
     void DestroyBullet()
     {
