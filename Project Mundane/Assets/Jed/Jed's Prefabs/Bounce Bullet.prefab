@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7420228638263970631}
   - component: {fileID: 9131863361661402765}
   - component: {fileID: 151487481913886712}
+  - component: {fileID: 1186259604619643235}
   m_Layer: 0
   m_Name: Bounce Bullet
   m_TagString: Untagged
@@ -98,8 +99,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  returnSpeed: 10
   radius: 0.25
   distance: 0
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 128
+  Boss: {fileID: 0}
+  returning: 0
+--- !u!50 &1186259604619643235
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2969594355875015208}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
