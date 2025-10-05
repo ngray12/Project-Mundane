@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SquarePlayerMovement : MonoBehaviour
 {
@@ -38,5 +39,18 @@ public class SquarePlayerMovement : MonoBehaviour
         float verticalVelocity = rb.velocity.y + gravityStrength * gravityDirection * Time.fixedDeltaTime;
         rb.velocity = new Vector2(0f, verticalVelocity);
 
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+
+        if (collision.CompareTag("Obstacle"))
+        {
+            Debug.Log("Hit Obstacle");
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

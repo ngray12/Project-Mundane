@@ -32,6 +32,10 @@ public class SquareBoss : MonoBehaviour
         Vector2.right
     };
 
+
+    [SerializeField]private AudioSource hitSound;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -135,6 +139,7 @@ public class SquareBoss : MonoBehaviour
         else if (collision.gameObject.CompareTag("Wall"))
         {
             Debug.Log("Hit Wall");
+            PlayHitSound();
             StopMoving();
         }
     }
@@ -145,6 +150,7 @@ public class SquareBoss : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             Debug.Log("Hit Obstacle");
+            PlayHitSound();
             TakeDamage();
             StopMoving();
             Destroy(other.gameObject);
@@ -166,6 +172,14 @@ public class SquareBoss : MonoBehaviour
         Debug.Log("Boss Defeated");
         Destroy(gameObject);
         Invoke(nameof(EndFight), 2f);
+    }
+
+    void PlayHitSound()
+    {
+        if(hitSound != null)
+        {
+            hitSound.Play();
+        }
     }
 
     void EndFight() => SceneManager.LoadScene("VictoryScene");

@@ -22,6 +22,7 @@ public class StarPlayerMovement : MonoBehaviour
 
     private float shootTimer = 0f;
 
+    [SerializeField] private AudioSource shootSound;
 
     private void Start()
     {
@@ -77,14 +78,21 @@ public class StarPlayerMovement : MonoBehaviour
         if (bulletPrefab == null) return;
 
         GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        PlayShootSound();
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.velocity = transform.up * projectileSpeed;
         }
     }
+    void PlayShootSound()
+    {
+        if (shootSound != null)
+        {
+            shootSound.Play();
+        }
+    }
 
-    
 
     void OnDrawGizmos()
     {

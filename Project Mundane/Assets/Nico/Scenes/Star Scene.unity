@@ -214,6 +214,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &773964940 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4577391054001855902, guid: ea5e1bb80f4082b4a847994f65cf4476, type: 3}
+  m_PrefabInstance: {fileID: 4631332633343933651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1524146451
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +323,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 1254603357784032053, guid: ea5e1bb80f4082b4a847994f65cf4476, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 773964940}
     - target: {fileID: 5977428978336469726, guid: ea5e1bb80f4082b4a847994f65cf4476, type: 3}
       propertyPath: m_Name
       value: Star Player

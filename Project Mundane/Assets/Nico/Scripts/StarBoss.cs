@@ -20,6 +20,8 @@ public class StarBoss : MonoBehaviour
     private int currentHealth;
 
     private Transform player;
+    [SerializeField] private AudioSource shootSound;
+    [SerializeField] private AudioSource hitSound;
 
 
     // Start is called before the first frame update
@@ -60,6 +62,7 @@ public class StarBoss : MonoBehaviour
         if (projectilePrefab == null || shootPoint == null) return;
 
         GameObject proj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
+        PlayShootSound();
         Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -70,6 +73,7 @@ public class StarBoss : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth--;
+        PLayHitSound();
         if (currentHealth <= 0)
         {
             Die();
@@ -81,6 +85,22 @@ public class StarBoss : MonoBehaviour
         Debug.Log("Star Boss Defeated!");
         Destroy(gameObject);
     }
+    void PlayShootSound()
+    {
+        if (shootSound != null)
+        {
+            shootSound.Play();
+        }
+    }
+
+    void PLayHitSound()
+    {
+        if (hitSound != null)
+        {
+            hitSound.Play();
+        }
+    }
+
 
     //----------------------GIZMOS-------------------------------
     void OnDrawGizmosSelected()
