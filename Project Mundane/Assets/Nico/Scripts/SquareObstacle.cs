@@ -26,6 +26,7 @@ public class SquareObstacle : MonoBehaviour
             {
                 Debug.Log("Hit KillZone");
                 Destroy(gameObject);
+
             }
         }
     }

@@ -8,4 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Square Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Square Boss Scene.unity
+    guid: 99641a3d3b67be3488a9acb3b4d86fd5
+  - enabled: 1
+    path: Assets/Scenes/Circle.unity
+    guid: 24bdbb09080ca7a4a99b3368e698cccc
+  - enabled: 1
+    path: Assets/Scenes/CircleBoss Fight.unity
+    guid: 95f9539ea395711479a1615b778675c9
+  - enabled: 1
+    path: Assets/Scenes/Star Scene.unity
+    guid: 17cee6162b2cdef43a6e260008a0f437
+  - enabled: 1
+    path: Assets/Scenes/Star Boss Scene.unity
+    guid: 7ac41338dcc87ab4080c8c6e068ba398
+  - enabled: 1
+    path: Assets/Scenes/Triangle.unity
+    guid: fe756b13882cf70409dc30493d2c2f9e
+  - enabled: 1
+    path: Assets/Scenes/TriangleBoss.unity
+    guid: 04558f8d7ee752e42bae3995dc439373
   m_configObjects: {}

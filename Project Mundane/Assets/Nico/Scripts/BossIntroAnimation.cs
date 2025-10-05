@@ -9,6 +9,8 @@ public class BossIntroAnimation : MonoBehaviour
     public float introDuration;
     public MonoBehaviour bossScript;
     public MonoBehaviour playerScript;
+    public Rigidbody2D rbBoss;
+    public Rigidbody2D rbPlaer;
 
     void Awake()
     {
@@ -22,7 +24,17 @@ public class BossIntroAnimation : MonoBehaviour
             playerScript.enabled = false;
         }
 
-        if(bossAnimator != null)
+        if (rbBoss != null)
+        {
+            rbBoss.gravityScale = 0;
+        }
+
+        if (rbPlaer != null)
+        {
+            rbPlaer.gravityScale = 0;
+        }
+
+        if (bossAnimator != null)
         {
             bossAnimator.SetTrigger(introTrigger);
         }
@@ -40,6 +52,16 @@ public class BossIntroAnimation : MonoBehaviour
         if (playerScript != null)
         {
             playerScript.enabled = true;
+        }
+
+        if (rbBoss != null)
+        {
+            rbBoss.gravityScale = 1;
+        }
+
+        if (rbPlaer != null)
+        {
+            rbPlaer.gravityScale = 1;
         }
     }
 }

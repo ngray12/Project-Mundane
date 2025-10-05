@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6250074786930557865}
   m_Layer: 0
   m_Name: LethalBullet
-  m_TagString: LethalBullet
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
 --- !u!114 &1009946295522724260
 MonoBehaviour:
   m_ObjectHideFlags: 0

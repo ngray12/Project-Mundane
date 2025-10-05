@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CircleBoss : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class CircleBoss : MonoBehaviour
     private float timer;
     [SerializeField] int leftXPos;
     [SerializeField] int rightXPos;
-    [SerializeField] int sizeDecrease;
+    [SerializeField] float sizeDecrease;
     [SerializeField] bool attacking;
     [SerializeField] bool flipped;
     [SerializeField] bool dead;
@@ -131,7 +132,10 @@ public class CircleBoss : MonoBehaviour
         }
     }
 
-    void Death() 
+    
+
+
+        void Death() 
     {
         dead = true;
         spriteRenderer.color = Color.gray;
@@ -148,6 +152,7 @@ public class CircleBoss : MonoBehaviour
         if(collision.tag == "Player") 
         {
             Debug.Log("restart");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

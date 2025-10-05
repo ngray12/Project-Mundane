@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 Debug.Log("Hit KillZone");
                 Destroy(gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
